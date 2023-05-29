@@ -17,7 +17,7 @@ test("POST /sign-up creates new user", async () => {
     redirect: "manual",
     headers: { "content-type": "application/x-www-form-urlencoded" },
   });
-
+  
   assert.equal(
     status,
     302,

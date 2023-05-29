@@ -1,11 +1,11 @@
+const { removeSession } = require("../model/session.js");
+
 function post(req, res) {
-  /**
-   * [1] Get the session ID from the cookie
-   * [2] Remove that session from the DB
-   * [3] Remove the session cookie
-   * [4] Redirect back home
-   */
-  res.status(500).send("");
+  const sid = req.signedCookies.sid; //why is this coming back undefined?
+  console.log("\u001b[33m", `THIS IS THE SID ${sid}`);
+
+  removeSession(req.session.id);
+  res.clearCookie("sid").status(302).redirect("/"); //why did it need the status(302)??
 }
 
 module.exports = { post };

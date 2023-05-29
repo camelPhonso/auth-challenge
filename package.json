@@ -31,5 +31,15 @@
       "es2021": true,
       "node": true
     }
-  }
+  },
+  "name": "auth-challenge",
+  "description": "Practice setting up user accounts and authentication in a Node web app.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
